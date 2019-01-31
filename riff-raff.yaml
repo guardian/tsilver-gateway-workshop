@@ -1,0 +1,17 @@
+stacks: [playground]
+regions: [eu-west-1]
+templates:
+  <name of project>:
+    type: aws-lambda
+    app: tsilver-gateway-workshop
+    contentDirectory:   tsilver-gateway-workshop
+    parameters:
+      bucket: gu-tsilver-gateway-workshop-dist
+      functionNames: [tsilver-gateway-workshop-]
+      fileName:  tsilver-gateway-workshop.zip
+      prefixStack: false
+
+deployments:
+  tsilver-gateway-workshop-upload:
+    template: tsilver-gateway-workshop
+    actions: [uploadLambda]
