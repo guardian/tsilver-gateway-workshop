@@ -1,4 +1,4 @@
-package com.gu.microserviceWorkshop
+package com.gu.tsilverGatewayWorkshop.Lambda
 
 object Lambda {
 

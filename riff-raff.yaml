@@ -4,11 +4,11 @@ templates:
   tsilver-gateway-workshop:
     type: aws-lambda
     app: tsilver-gateway-workshop
-    contentDirectory:   tsilver-gateway-workshop
+    contentDirectory: tsilver-gateway-workshop
     parameters:
       bucket: gu-tsilver-gateway-workshop-dist
       functionNames: [tsilver-gateway-workshop-]
-      fileName:  tsilver-gateway-workshop.zip
+      fileName: tsilver-gateway-workshop.zip
       prefixStack: false
 
 deployments:
