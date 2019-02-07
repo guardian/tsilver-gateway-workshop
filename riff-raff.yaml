@@ -15,3 +15,17 @@ deployments:
   tsilver-gateway-workshop-upload:
     template: tsilver-gateway-workshop
     actions: [uploadLambda]
+
+  tsilver-gateway-workshop-cfn:
+    type: cloud-formation
+    app: tsilver-gateway-workshop
+    dependencies: [tsilver-gateway-workshop-upload]
+    parameters:
+      prependStackToCloudFormationStackName: false
+      cloudFormationStackName: tsilver-gateway-workshop
+      templatePath: cfn.yaml
+
+  tsilver-gateway-workshop-lambda-update:
+    template: tsilver-gateway-workshop
+    actions: [updateLambda]
+    dependencies: [tsilver-gateway-workshop-cfn]
