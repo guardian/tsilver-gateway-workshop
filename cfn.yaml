@@ -136,7 +136,7 @@ Resources:
       - WorkshopApi
       - WorkshopApiDeployment
 
-    WorkshopLambdaInvokePermission:
+  WorkshopLambdaInvokePermission:
       Type: AWS::Lambda::Permission
       Properties:
         Action: lambda:InvokeFunction
