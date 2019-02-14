@@ -49,9 +49,8 @@ Resources:
             Statement:
               Effect: Allow
               Action:
-                -  lambda:InvokeFunction
+                - lambda:InvokeFunction
               Resource: "*"
-
         - PolicyName: api
           PolicyDocument:
             Statement:
